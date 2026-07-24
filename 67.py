@@ -1,22 +1,74 @@
-Nombre = input("Ingrese su nombre: ")
+print("AHORCADO DE UN NUMERO, 2 JUGADORES")
+print("TIENES 5 INTENTOS")
 
-print("Hola " + Nombre + ", bienvenido a Python")
+palabra = input("Ingrese el numero a adivinar: ")
+intentos = 5
 
-Edad = input("Ingrese su edad: ")
+prueba = input("Adivina el numero: ")
 
-print("Tienes " + Edad + " Años")
-
-Color = input("Cual es tu color favorito? ")
-
-print("El color " + Color + " es hermoso")
-
-Hola = input("Que te gustaria que hiciera por ti? ")
-
-if Hola == "Ya me quiero ir":
-    print("¡Hasta pronto!")
-elif Hola == "Son im crine":
-    print("Sonion")
+if prueba == palabra:
+    print("GANASTEEE!!!!")
 else:
-    print("El 67 es el mejor numero del mundo")
-    
-    
+    print(f"El {prueba} no es la respuesta correcta")
+intentos - 1
+
+intentos = intentos - 1
+
+print(f"Tienes {intentos} intentos restantes")
+
+
+
+
+prueba = input("Adivina el numero: ")
+
+if prueba == palabra:
+    print("GANASTEEE!!!!")
+else:
+    print(f"El {prueba} no es la respuesta correcta")
+
+
+intentos = intentos - 1
+
+print(f"Tienes {intentos} intentos restantes")
+
+
+
+prueba = input("Adivina el numero: ")
+
+if prueba == palabra:
+    print("GANASTEEE!!!!")
+else:
+    print(f"El {prueba} no es la respuesta correcta")
+
+
+intentos = intentos - 1
+
+print(f"Tienes {intentos} intentos restantes")
+
+
+
+prueba = input("Adivina el numero: ")
+
+if prueba == palabra:
+    print("GANASTEEE!!!!")
+else:
+    print(f"El {prueba} no es la respuesta correcta")
+
+
+intentos = intentos - 1
+
+print(f"Tienes {intentos} intentos restantes")
+
+
+
+prueba = input("Adivina el numero: ")
+
+if prueba == palabra:
+    print("GANASTEEE!!!!")
+else:
+    print(f"El {prueba} no es la respuesta correcta")
+
+
+intentos = intentos - 1
+
+print(f"Tienes {intentos} intentos restantes, HAZ PERDIDO :C")
