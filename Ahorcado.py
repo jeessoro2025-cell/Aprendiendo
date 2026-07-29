@@ -6,7 +6,7 @@ Ganar = False
 intentos = 5
 
 while Ganar == False:
-    print(f"Te quedan {intentos} intentos")
+    print(f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTe quedan {intentos} intentos")
     adivinada = input("Adivina el numero: ")
     if adivinada != palabra:
         print(f"ERROR te quedan {intentos} intentos")
