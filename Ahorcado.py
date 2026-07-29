@@ -1,7 +1,7 @@
 print("AHORCADO DE NUMEROS \n Juego de 2 jugadores")
 
 palabra = input("Escribe el numero a adivinar: ")
-
+print("Tienes 5 intentos")
 Ganar = False
 intentos = 5
 
