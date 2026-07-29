@@ -1,74 +1,51 @@
-print("AHORCADO DE UN NUMERO, 2 JUGADORES")
-print("TIENES 5 INTENTOS")
+print("AHORCADO DE NUMEROS \n Juego de 2 jugadores")
 
-palabra = input("Ingrese el numero a adivinar: ")
+palabra = input("Escribe el numero a adivinar: ")
+
+Ganar = False
 intentos = 5
 
-prueba = input("Adivina el numero: ")
+while Ganar == False:
+    print(f"Te quedan {intentos} intentos")
+    adivinada = input("Adivina el numero: ")
+    if adivinada != palabra:
+        print(f"ERROR te quedan {intentos} intentos")
+        intentos -= 1
+        if intentos == 0:
+            print("Te haz quedado sin intentos")
+            print(f"El numero era {palabra}")
+            s_j_respuesta = False
+            
+            while s_j_respuesta == False:
+                seguir_jugando = input("¿Volver a jugar? Escribe Si/No: ")
+                if seguir_jugando == "No":
+                    print("Gracias por jugar")
+                    Ganar = True
+                    s_j_respuesta = True
+                elif seguir_jugando == "Si":
+                    intentos = 5 
+                    palabra = input("Escribe el numero a adivinar: ")
+                    s_j_respuesta = True
+                else:
+                    print("Para la otra escribe la palabra bien")
+            
+        
+    elif adivinada == palabra:
+        s_j_respuesta = False
+        print("GANASTEE!!!!")
+        while s_j_respuesta == False:
+            seguir_jugando = input("¿Volver a jugar? Escribe Si/No: ")
+            
+            if seguir_jugando == "No":
+                print("Gracias por jugar")
+                Ganar=True
+                s_j_respuesta = True
+            elif seguir_jugando == "Si":
+                intentos = 5
+                palabra = input("Escribe el numero a adivinar: ")
+                s_j_respuesta = True
+            else:
+                print("Para la otra, escribe la palabra bien")
 
-if prueba == palabra:
-    print("GANASTEEE!!!!")
-else:
-    print(f"El {prueba} no es la respuesta correcta")
-intentos - 1
-
-intentos = intentos - 1
-
-print(f"Tienes {intentos} intentos restantes")
-
-
-
-
-prueba = input("Adivina el numero: ")
-
-if prueba == palabra:
-    print("GANASTEEE!!!!")
-else:
-    print(f"El {prueba} no es la respuesta correcta")
-
-
-intentos = intentos - 1
-
-print(f"Tienes {intentos} intentos restantes")
-
-
-
-prueba = input("Adivina el numero: ")
-
-if prueba == palabra:
-    print("GANASTEEE!!!!")
-else:
-    print(f"El {prueba} no es la respuesta correcta")
-
-
-intentos = intentos - 1
-
-print(f"Tienes {intentos} intentos restantes")
-
-
-
-prueba = input("Adivina el numero: ")
-
-if prueba == palabra:
-    print("GANASTEEE!!!!")
-else:
-    print(f"El {prueba} no es la respuesta correcta")
-
-
-intentos = intentos - 1
-
-print(f"Tienes {intentos} intentos restantes")
-
-
-
-prueba = input("Adivina el numero: ")
-
-if prueba == palabra:
-    print("GANASTEEE!!!!")
-else:
-    print(f"El {prueba} no es la respuesta correcta")
-
-
-intentos = intentos - 1
-
-print(f"Tienes {intentos} intentos restantes, HAZ PERDIDO :C")
+        
+    
