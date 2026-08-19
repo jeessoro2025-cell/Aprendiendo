@@ -27,12 +27,13 @@ while Ganar == False:
             elif seguir_jugando == "Si":
                 intentos = 5
                 palabra = input("Escribe el numero a adivinar: ")
+                adivinada = []
                 break
                 
             else:
                 print("Para la otra, escribe la palabra bien")
 
-    elif adivinada != palabra:
+    else:
         intentos -= 1
         print(f"ERROR te quedan {intentos} intentos")
         if intentos == 0:
@@ -49,6 +50,7 @@ while Ganar == False:
                 elif seguir_jugando == "Si":
                     intentos = 5 
                     palabra = input("Escribe el numero a adivinar: ")
+                    adivinada = []
                     break
                 else:
                     print("Para la otra escribe la palabra bien")
