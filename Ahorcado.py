@@ -5,33 +5,41 @@ Ganar = False
 intentos = 5
 print(f"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTienes {intentos} intentos")
 adivinada = []
-while Ganar == False:
-    numero = (input("Adivina el numero: "))
 
-    if numero in adivinada:
-        print(f"Cuidado, ya habías puesto el número {numero}")
+def preguntar_seguir_jugando():
+    while True:
+        seguir_jugando = input("¿Volver a jugar? Escribe Si/No: ")
+            
+        if seguir_jugando == "No":
+            print("Gracias por jugar")
+            
+            break
+        elif seguir_jugando == "Si":
+            
+            return True
+                
+        else:
+                print("Para la otra, escribe la palabra bien")
+    
+while Ganar == False:
+    numero = (input("Adivina el numero: ")) #IA
+
+    if numero in adivinada: #IA
+        print(f"Cuidado, ya habías puesto el número {numero}") #IA
         continue
-    else:
-        adivinada.append(numero)
+    else: #IA
+        adivinada.append(numero) #IA
    
     if palabra in adivinada:
         
         print("GANASTEE!!!!")
-        while True:
-            seguir_jugando = input("¿Volver a jugar? Escribe Si/No: ")
-            
-            if seguir_jugando == "No":
-                print("Gracias por jugar")
-                Ganar = True
-                break
-            elif seguir_jugando == "Si":
-                intentos = 5
-                palabra = input("Escribe el numero a adivinar: ")
-                adivinada = []
-                break
-                
-            else:
-                print("Para la otra, escribe la palabra bien")
+        if preguntar_seguir_jugando() == True:
+            intentos = 5
+            palabra = input("Escribe el numero a adivinar: ")
+            adivinada = []
+        else:
+            Ganar = True
+        
 
     else:
         intentos -= 1
@@ -39,20 +47,14 @@ while Ganar == False:
         if intentos == 0:
             print("Te haz quedado sin intentos")
             print(f"El numero era {palabra}")
+            if preguntar_seguir_jugando() == True:
+                intentos = 5
+                palabra = input("Escribe el numero a adivinar: ")
+                adivinada = []
+            else:
+                Ganar = True
+       
                 
-                
-            while True:
-                seguir_jugando = input("¿Volver a jugar? Escribe Si/No: ")
-                if seguir_jugando == "No":
-                    print("Gracias por jugar")
-                    Ganar = True
-                    break
-                elif seguir_jugando == "Si":
-                    intentos = 5 
-                    palabra = input("Escribe el numero a adivinar: ")
-                    adivinada = []
-                    break
-                else:
-                    print("Para la otra escribe la palabra bien")
+           
                 
     
