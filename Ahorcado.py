@@ -33,10 +33,11 @@ while Ganar == False:
     if palabra in adivinada:
         
         print("GANASTEE!!!!")
-        if preguntar_seguir_jugando() == True:
+        if preguntar_seguir_jugando():
             intentos = 5
             palabra = input("Escribe el numero a adivinar: ")
             adivinada = []
+            print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
         else:
             Ganar = True
         
@@ -47,14 +48,10 @@ while Ganar == False:
         if intentos == 0:
             print("Te haz quedado sin intentos")
             print(f"El numero era {palabra}")
-            if preguntar_seguir_jugando() == True:
+            if preguntar_seguir_jugando():
                 intentos = 5
                 palabra = input("Escribe el numero a adivinar: ")
                 adivinada = []
+                print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
             else:
                 Ganar = True
-       
-                
-           
-                
-    
