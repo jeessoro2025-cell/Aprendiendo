@@ -46,7 +46,7 @@ while Ganar == False:
         intentos -= 1
         print(f"ERROR te quedan {intentos} intentos")
         if intentos == 0:
-            print("Te haz quedado sin intentos")
+            print("Te has quedado sin intentos")
             print(f"El numero era {palabra}")
             if preguntar_seguir_jugando():
                 intentos = 5
